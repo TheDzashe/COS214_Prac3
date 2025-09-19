@@ -7,5 +7,6 @@ class Command{
         //put variables
     public:
         void execute();
-}
+};
+
 #endif

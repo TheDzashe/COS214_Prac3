@@ -11,7 +11,7 @@ class CtrlCat: public ChatRoom{
         virtual void sendMessage(std::string message, Users* fromUser);
         virtual void saveMessage(std::string message, Users* fromUser);
         virtual void removeUser(Users* user);
-        virtual ~CtrlCat();
+        virtual ~CtrlCat(){};
 };
 
 #endif

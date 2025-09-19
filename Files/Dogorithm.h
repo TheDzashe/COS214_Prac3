@@ -12,7 +12,7 @@ class Dogorithm: public ChatRoom{
         virtual void sendMessage(std::string message, Users* fromUser);
         virtual void saveMessage(std::string message, Users* fromUser);
         virtual void removeUser(Users* user);
-        virtual ~Dogorithm();
+        virtual ~Dogorithm() {};
 };
 
 #endif
