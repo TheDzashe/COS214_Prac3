@@ -19,9 +19,7 @@ class Command;
  * @class Users
  * @brief Abstract colleague class that represents a user in the PetSpace platform
  * 
- * This class serves as the Colleague in the Mediator design pattern and also acts as
- * the Invoker in the Command pattern. Users communicate through ChatRoom mediators
- * and execute commands for message handling.
+ * This class serves as the Colleague in the Mediator design pattern and also acts as the Invoker in the Command pattern. Users communicate through ChatRoom mediators and execute commands for message handling.
  */
 class Users{
 protected:
