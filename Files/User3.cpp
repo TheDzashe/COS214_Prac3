@@ -1,8 +1,13 @@
+/**
+ * @file User3.cpp
+ * @brief Implementation of the User class
+ * @author Nyashadzashe
+ * @date 2025
+ */
+
 #include <iostream>
 
 #include "User3.h"
-
-
 
 
 User3::User3(std::string name):Users(name){

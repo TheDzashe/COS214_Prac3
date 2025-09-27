@@ -1,3 +1,10 @@
+/**
+ * @file CtrlCat.cpp
+ * @brief Implementation of the DeliveredState class
+ * @author Nyashadzashe
+ * @date 2025
+ */
+
 #include "DeliveredState.h"
 #include "ReadState.h"
 #include "Message.h"

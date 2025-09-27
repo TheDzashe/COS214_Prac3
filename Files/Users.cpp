@@ -1,3 +1,10 @@
+/**
+ * @file Users.cpp
+ * @brief Implementation of the User class
+ * @author Nyashadzashe
+ * @date 2025
+ */
+
 
 #include <iostream>
 

@@ -1,3 +1,10 @@
+/**
+ * @file SendMessageCommand.cpp
+ * @brief Implementation of the SendMessageCommand class
+ * @author Nyashadzashe
+ * @date 2025
+ */
+
 #include "SendMessageCommand.h"
 #include "ChatRoom.h"
 

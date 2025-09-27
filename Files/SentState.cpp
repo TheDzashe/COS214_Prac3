@@ -1,4 +1,10 @@
-// SentState.cpp
+/**
+ * @file SentState.cpp
+ * @brief Implementation of the SentState class
+ * @author Nyashadzashe
+ * @date 2025
+ */
+
 #include "SentState.h"
 #include "DeliveredState.h"
 #include "Message.h"

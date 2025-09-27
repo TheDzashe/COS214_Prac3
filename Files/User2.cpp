@@ -1,9 +1,13 @@
+/**
+ * @file User2.cpp
+ * @brief Implementation of the User2 class
+ * @author Nyashadzashe
+ * @date 2025
+ */
+
 #include <iostream>
 
 #include "User2.h"
-
-
-
 
 User2::User2(std::string name):Users(name){
     //nothing

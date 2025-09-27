@@ -1,3 +1,10 @@
+/**
+ * @file LogMessageCommand.cpp
+ * @brief Implementation of the LogMessageCommand class
+ * @author Nyashadzashe
+ * @date 2025
+ */
+
 #include "LogMessageCommand.h"
 #include "ChatRoom.h"
 

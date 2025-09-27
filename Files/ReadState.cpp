@@ -1,4 +1,10 @@
-// ReadState.cpp
+/**
+ * @file ReadState.cpp
+ * @brief Implementation of the ReadState class
+ * @author Nyashadzashe
+ * @date 2025
+ */
+
 #include "ReadState.h"
 #include <iostream>
 

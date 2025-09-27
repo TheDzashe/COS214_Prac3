@@ -1,3 +1,10 @@
+/**
+ * @file Message.cpp
+ * @brief Implementation of the Message class
+ * @author Nyashadzashe
+ * @date 2025
+ */
+
 #include "Message.h"
 #include "SentState.h"
 #include <iostream>

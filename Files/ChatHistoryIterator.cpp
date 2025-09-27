@@ -1,3 +1,10 @@
+/**
+ * @file ChatHistoryIterator.cpp
+ * @brief Implementation of the ChatHistoryIterator class
+ * @author Nyashadzashe
+ * @date 2025
+ */
+
 #include "ChatHistoryIterator.h"
 #include "ChatRoom.h"
 

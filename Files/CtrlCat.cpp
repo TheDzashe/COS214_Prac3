@@ -1,3 +1,10 @@
+/**
+ * @file CtrlCat.cpp
+ * @brief Implementation of the CtrlCat class
+ * @author Nyashadzashe
+ * @date 2025
+ */
+
 #include "CtrlCat.h"
 #include "ChatHistoryIterator.h"
 

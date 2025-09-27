@@ -1,3 +1,10 @@
+/**
+ * @file TestingMain.cpp  
+ * @brief Main testing file demonstrating design pattern implementations
+ * @author Nyashadzashe
+ * @date 2025
+ */
+
 #include "ChatRoom.h"
 #include "Dogorithm.h"
 #include "CtrlCat.h"

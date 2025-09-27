@@ -1,3 +1,10 @@
+/**
+ * @file Dogotithm.cpp
+ * @brief Implementation of the Dogorithm class
+ * @author Nyashadzashe
+ * @date 2025
+ */
+
 #include "Dogorithm.h"
 #include "ChatHistoryIterator.h"
 #include <iostream>

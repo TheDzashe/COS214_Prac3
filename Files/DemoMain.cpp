@@ -1,3 +1,10 @@
+/**
+ * @file TestingMain.cpp  
+ * @brief Main testing file demonstrating design pattern implementations
+ * @author Nyashadzashe
+ * @date 2025
+ */
+
 #include "ChatRoom.h"
 #include "Dogorithm.h"
 #include "CtrlCat.h"
@@ -62,5 +69,11 @@ int main(){
     std::cout <<"__SEARCHING FOR A MESSAGE__" <<std::endl;
     dogChat->searchMessage("Hi");
 
+    delete blackPanther;
+    delete ironMan;
+    delete blackWidow;
+    delete thor;
 
+    delete dogChat;
+    delete catChat;
 }
