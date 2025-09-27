@@ -8,7 +8,7 @@ TARGET = main
 COVFLAGS = --coverage -O0 
 
 # Source files
-SRCS = main.cpp Topping.cpp ToppingGroup.cpp BasePizza.cpp ExtraCheese.cpp PizzaDecorator.cpp StuffedCrust.cpp 
+SRCS = TestingMain.cpp ChatHistoryIterator.cpp CtrlCat.cpp Dogorithm.cpp LogMessageCommand.cpp SendMessageCommand.cpp Users.cpp User1.cpp User2.cpp User3.cpp Message.cpp DeliveredState.cpp ReadState.cpp SentState.cpp  
 OBJS = $(SRCS:.cpp=.o)
 
 # Build rule

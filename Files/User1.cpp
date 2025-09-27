@@ -3,7 +3,9 @@
 #include "User1.h"
 
 
-User1::User1(ChatRoom* chatRooms, std::string name):Users(name){
+
+
+User1::User1(std::string name):Users(name){
     //nothing
 }
 

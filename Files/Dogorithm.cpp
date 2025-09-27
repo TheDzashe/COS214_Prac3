@@ -1,4 +1,5 @@
 #include "Dogorithm.h"
+#include "ChatHistoryIterator.h"
 #include <iostream>
 
 Dogorithm::Dogorithm(){
@@ -15,7 +16,11 @@ void Dogorithm::registerUser(Users* user) {
 }
 
 void Dogorithm::removeUser(Users* user) {
-    for (int i = 0; i < users.size(); i++) {
+    if(user == NULL){
+        return;
+    }
+
+    for (size_t i = 0; i < users.size(); i++) {
         if (users[i] == user) {
             users.erase(users.begin() + i);
             std::cout << user->getName() << " has left the Dogorithm room." << std::endl;
@@ -26,12 +31,12 @@ void Dogorithm::removeUser(Users* user) {
 
 //notice how the notify of the mediator calls the get of the colleague
 void Dogorithm::sendMessage(std::string message, Users* fromUser) {
-    //we save the message first
-    saveMessage(message, fromUser);
+    //we save the message first, but the LogMessageCommannd is doing it already
+    //saveMessage(message, fromUser);
     
-    std::cout << "(Dogorithm) Broadcasting message: " << message << std::endl;
+    std::cout << "**(Dogorithm) Broadcasting message: " << message << std::endl;
 
-    for (int i = 0; i < users.size(); i++) {
+    for (size_t i = 0; i < users.size(); i++) {
         //so that the message does not go back to the sender
         if (users[i] != fromUser) {
             users[i]->receive(message, fromUser, this);
@@ -42,6 +47,9 @@ void Dogorithm::sendMessage(std::string message, Users* fromUser) {
 
 void Dogorithm::saveMessage(std::string message, Users* fromUser) {
 
+    if(fromUser == NULL){
+        return;
+    }
     //want the message to have the senders name 
     std::string editedMsg = "[Dogorithm] " + fromUser->getName() + ": " + message;
 
@@ -49,9 +57,41 @@ void Dogorithm::saveMessage(std::string message, Users* fromUser) {
     chatHistory.push_back(editedMsg);
     
     //doing this for debugging
-    std::cout << "(Log saved) " << editedMsg << std::endl;
+    std::cout << "**(Log saved) " << editedMsg << std::endl;
 }
 
 Dogorithm::~Dogorithm() {
     //feel like for now it doesn't really do anything cause it's not really responsible for any poinnters like that??
+}
+
+ChatHistoryIterator* Dogorithm::createChatHistoryIterator(){
+    //this is a copy of the chat history passed to the iterator
+    //! I feel like I do not need to delete these since the vector should handle deletion right?
+    return new ChatHistoryIterator(chatHistory);
+}
+
+bool Dogorithm::searchMessage(const std::string& keyword) {
+    Iterator* iterator = createChatHistoryIterator();
+    bool found = false;
+    
+    for (iterator->first(); !iterator->isDone(); iterator->next()) {
+        std::string message = iterator->currentItem();
+        
+        // Simple manual search without npos
+        bool containsKeyword = false;
+        for (size_t i = 0; i <= message.length() - keyword.length(); i++) {
+            if (message.substr(i, keyword.length()) == keyword) {
+                containsKeyword = true;
+                break;
+            }
+        }
+        
+        if (containsKeyword) {
+            std::cout << "Found: " << message << std::endl;
+            found = true;
+        }
+    }
+    
+    delete iterator;
+    return found;
 }
